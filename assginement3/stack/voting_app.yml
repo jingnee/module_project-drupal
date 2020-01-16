@@ -36,7 +36,6 @@ services:
         - db-data:/var/lib/postgresql/data
       networks:
         - frontend
-        - backend
 
   result-app:
       image: bretfisher/examplevotingapp_result

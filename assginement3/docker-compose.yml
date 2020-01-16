@@ -16,7 +16,6 @@ services:
     ports:
       - 8000:80
       - 9000:9000
-      - 9005:9005
       - 5001:81
     depends_on: 
       - registry
