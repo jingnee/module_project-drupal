@@ -109,7 +109,17 @@ $ docker swarm init
 
 
 
-### 5. `voting_app.yml` 배포하기
+### 5. 네트워크 생성
+
+``` shell
+매니저
+$ docker network create --driver=overlay --attachable frontend
+$ docker network create --driver=overlay --attachable backend
+```
+
+
+
+### 6. `voting_app.yml` 배포하기
 
 ``` shell
 매니저
@@ -118,7 +128,7 @@ $ docker stack deploy -c /stack/voting_app.yml my_vote_app
 
 
 
-### 6. 서비스 확인
+### 7. 서비스 확인
 
 ``` shell
 $ docker service ls
@@ -126,7 +136,7 @@ $ docker service ls
 
 
 
-### 7. 웹브라우저 확인
+### 8. 웹브라우저 확인
 
 - `localhost:8000` 
 
